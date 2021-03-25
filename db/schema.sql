@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS fitcheck_db;
+CREATE DATABASE fitcheck_db;
