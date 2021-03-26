@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS fitcheck_db;
-CREATE DATABASE fitcheck_db;
+DROP DATABASE IF EXISTS eyeread_db;
+CREATE DATABASE eyeread_db;
