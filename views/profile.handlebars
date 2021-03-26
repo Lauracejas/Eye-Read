@@ -4,34 +4,30 @@
   </div>
 </div>
 
+
+<div class="SearchBox">
+		<input type="text" class="SearchBox-input" id="booksearch" placeholder="Enter the book you want to search">
+	
+			<button class="SearchBox-button">
+				<i class="SearchBox-icon  material-icons">search</i>
+			</button>
+		
+	</div>
+
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Add Book:</h3>
-    <div class="dropdown">
-  <button tyoe="submit" class="dropbtn">add to</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Books I want to Read</a>
-    <a href="#">Books I have Read</a>
+    <h3>Add this Book to my Reading List:</h3>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Add Book To:
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Books I want to read</a>
+    <a class="dropdown-item" href="#">Books I have read</a>
   </div>
 </div>
 
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
