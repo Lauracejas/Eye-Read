@@ -37,7 +37,7 @@ router.get("/profile", withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render("profile", {
-      ...user,
+      user,
       logged_in: true,
     });
   } catch (err) {
@@ -51,7 +51,6 @@ router.get("/login", (req, res) => {
     res.redirect("/profile");
     return;
   }
-
   res.render("login");
 });
 
