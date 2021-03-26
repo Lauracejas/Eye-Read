@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Lauracejas/Project-2-Fit-Check#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^8.2.0",
