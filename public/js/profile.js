@@ -5,7 +5,7 @@ const searchBooks = async (event) => {
 
   const response = await fetch("/api/books", {
     method: "POST",
-    body: JSON.stringify({ search: searchInput.value }),
+    body: JSON.stringify({ search: searchInput }),
     headers: { "Content-Type": "application/json" },
   });
   const data = await response.json();
