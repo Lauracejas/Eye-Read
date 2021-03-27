@@ -10,6 +10,11 @@ const searchBooks = async (event) => {
   });
   const data = await response.json();
   console.log(data);
+  console.log(data.items[0].volumeInfo.title);
+  console.log(data.items[0].volumeInfo.authors);
+  console.log(data.items[0].volumeInfo.description);
+  console.log(data.items[0].volumeInfo.imageLinks.thumbnail);
 };
 
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
+

@@ -8,6 +8,6 @@ router.post('/', async (req, res) => {
     const { data } = await axios.get('https://www.googleapis.com/books/v1/volumes?q=intitle:'+ req.body.search + '&key=' + process.env.GOOGLEBOOKS_APIKEY);
     console.log(data);
     res.json(data);
-})
+});
 
 module.exports = router;
