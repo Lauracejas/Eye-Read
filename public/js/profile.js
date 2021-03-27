@@ -16,5 +16,6 @@ const searchBooks = async (event) => {
   console.log(data.items[0].volumeInfo.imageLinks.thumbnail);
 };
 
+
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
 
