@@ -7,40 +7,42 @@
   <title>eyeREAD</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  {{!--
-  <link rel="stylesheet" href="/css/jass.css"> --}}
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="navbar-inner">
-          <a class="navbar-brand" href="#">
-            <h1><a href="/">eyeREAD</a></h1>
-          </a>
 
-        </div>
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+  <header>
+    <nav class="navbar display-flex justify-content-around p-0 navbl">
 
-    </header>
-    <main class="container container-fluid mt-5">
-     
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
+      <a href="/">
+        <img src="/images/ER.png">
+      </a>
 
-    </footer>
+      {{#if logged_in}}
+      <a href="/profile">profile</a> |
+      <button class="btn no-button " id="logout">logout</button>
+      {{else}}
+      <a class="btn" href="/login">Login</a>
+      {{/if}}
+      </a>
+    </nav>
+
+  </header>
+  <main class="container container-fluid ">
+
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
+  <footer>
+    <nav></nav>
+  </footer>
   </div>
 
   <!-- Render script for logged in users only -->
