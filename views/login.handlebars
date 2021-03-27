@@ -1,75 +1,60 @@
-<div class="row justify-content-center">
+{{!-- <div class="col-md-3 loginEl"> --}}
 
 
-
-
-  <div class="col-md-3 bg-dark loginEl">
-    <div class="row justify-content-center">
-
-      <form class="form login-form ">
-        <h3 class="row justify-content-center text-white">Login</h3>
-        <div class="mb-3">
-
-          <div class="col">
-            <input class="form-input" type="text" id="email-login" placeholder="Email" />
-
-          </div>
-        </div>
-        <div class="mb-3">
-
-          <div class="col">
-
-            <input class="form-input" type="password" id="password-login" placeholder="Password" />
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="col text-center">
-            <button class="btn btn-primary" type="submit">Login</button>
-
-          </div>
-        </div>
-      </form>
-
+  <form class="form login-form backlight loginEl">
+    <h3 class="row justify-content-center text-white">Login</h3>
+    <div class="mb-3">
+      <div class="col">
+        <input class="form-input" type="text" id="email-login" placeholder="Email" />
+      </div>
     </div>
-  </div>
-  
-  <div class="col-md-3 bg-dark signupEl">
-    <div class="row justify-content-center">
-      <form class="form signup-form">
-        <h3 class="row justify-content-center text-white">Signup</h3>
-        <div class="mb-3">
-         
-          <div class="col">
-
-            <input class="form-input" type="text" id="name-signup" placeholder="Name" />
-          </div>
-        </div>
-        <div class="mb-3">
-         
-          <div class="col">
-            <input class="form-input" type="text" id="email-signup"placeholder="Email"/>
-
-          </div>
-        </div>
-        <div class="mb-3">
-          
-          <div class="col">
-
-            <input class="form-input" type="password" id="password-signup" placeholder="Password" />
-          </div>
-        </div>
-        <div class="form-group text-center">
-          <div class="mb-3">
-            <div class="col">
-
-              <button class="btn btn-primary" type="submit">Signup</button>
-            </div>
-          </div>
-        </div>
-      </form>
-
+    <div class="mb-3">
+      <div class="col">
+        <input class="form-input" type="password" id="password-login" placeholder="Password" />
+      </div>
     </div>
-  </div>
+    <div class="mb-3 ">
+      <div class="col text-center">
+        <button class="btn" type="submit">Login</button>
+      </div>
+    </div>
+  </form>
+
+  <form class="form signup-form backlight signupEl">
+    <h3 class="row justify-content-center text-white">Signup</h3>
+    <div class="mb-3">
+
+      <div class="col">
+
+        <input class="form-input" type="text" id="name-signup" placeholder="Name" />
+      </div>
+    </div>
+    <div class="mb-3">
+
+      <div class="col">
+        <input class="form-input" type="text" id="email-signup" placeholder="Email" />
+
+      </div>
+    </div>
+    <div class="mb-3">
+
+      <div class="col">
+
+        <input class="form-input" type="password" id="password-signup" placeholder="Password" />
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <div class="mb-3">
+        <div class="col">
+
+          <button class="btn" type="submit">Signup</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
 </div>
+</div>
+</div> 
 
 <script src="/js/login.js"></script>
