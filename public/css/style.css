@@ -1,3 +1,17 @@
+:root {
+	--primary-color: #84898a;
+	--accent-color: #536e7a;
+
+	--text-color: #263238;
+	--body-color: #80deea;
+	--main-font: 'roboto';
+	--font-bold: 700;
+	--font-regular: 400;
+}
+
+
+
+
 .loginEl {
     margin: 10px;
     padding-top: 20px;
@@ -9,4 +23,67 @@
     padding-top: 20px;
     border-radius: 15px;
     box-shadow: 2px 2px 4px #000000;
+}
+/* body */
+
+/* search button css */
+input,
+.btn-profile {
+	border: none;
+	background: none;
+	outline: 0;
+}
+.btn-profile {cursor: pointer}
+
+.SearchBox-input::placeholder {
+    color:rgb(0, 0, 0);
+       opacity: .6;
+   }
+
+   .SearchBox {
+       --height: 4em;
+       display: flex;
+       background-color: var(--primary-color);
+       
+       border-radius: var(--height);
+       height: var(--height);
+       width: 340px;
+    }
+    .SearchBox:hover .SearchBox-input {
+        padding-left: 2em;
+        padding-right: 1em;
+        width: 340px;
+    }
+    .SearchBox-input {
+        /* display: block; */
+        /* border none; */
+        transition: .45s;
+        width: 0;
+    }
+    .SearchBox-input {
+        width: 0;
+        font-size: 1.2em;
+        color: #fff;
+        transition: .45s;
+    }
+    .SearchBox-button {
+    
+    display: flex;
+    border-radius: 50%;
+    width: var(--height);
+    height: var(--height);
+    background-color: var(--accent-color);
+    transition: .3s;
+}
+.SearchBox-button:active  {
+    transform: scale(.85);
+}
+.SearchBox-icon {
+    margin: auto;
+    color: #fff;
+}
+@media screen and (min-width: 400px){
+	.SearchBox:hover .SearchBox-input {
+		width: 500px;
+	}
 }
