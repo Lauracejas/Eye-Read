@@ -46,66 +46,6 @@ padding-left: 10px;
     transform: scale(1.1);
     
 }
-
-/* body */
-
-/* search button css */
-/* input,
-.btn-profile {
-	border: none;
-	background: none;
-	outline: 0;
-}
-.btn-profile {cursor: pointer}
-
-.SearchBox-input::placeholder {
-    color:rgb(0, 0, 0);
-       opacity: .6;
-   }
-
-   .SearchBox {
-       --height: 4em;
-       display: flex;
-       background-color: var(--primary-color);
-       
-       border-radius: var(--height);
-       height: var(--height);
-       width: 340px;
-    }
-    .SearchBox:hover .SearchBox-input {
-        padding-left: 2em;
-        padding-right: 1em;
-        width: 340px;
-    }
-    .SearchBox-input {
-        /* display: block; */
-        /* border none; */
-        /* transition: .45s;
-        width: 0;
-    }
-    .SearchBox-input {
-        width: 0;
-        font-size: 1.2em;
-        color: #fff;
-        transition: .45s;
-    }
-    .SearchBox-button {
-    
-    display: flex;
-    border-radius: 50%;
-    width: var(--height);
-    height: var(--height);
-    background-color: var(--accent-color);
-    transition: .3s;
-} */
-/* .SearchBox-button:active  {
-    transform: scale(.85);
-}
-.SearchBox-icon {
-    margin: auto;
-    color: #fff;
-/* } */
-
 html,body {
     height: 100%;
 	position: relative;
@@ -165,7 +105,6 @@ img:hover {
 
 
 
-
 .btn {
     /* position: relative;
     margin: 0px;
@@ -184,7 +123,7 @@ img:hover {
     
     /* background-color: teal; */
 }
-.btn::after {
+/* .btn::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -198,14 +137,61 @@ img:hover {
     box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
     transform: translateZ(50px);
     z-index: 4;
+} */
+
+
+/* profile page  */
+.jumbotron {
+    background:transparent;
+    /* backdrop-filter: blur(8px); */
+    
 }
+
+.SearchBox {
+    padding-bottom: 60px
+}
+.picApi {
+    padding: 60px 60px 60px 160px;
+    width: 300px;
+    
+}
+.card {
+    background:transparent;
+    backdrop-filter: blur(8px);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 1210px;
+    height: 330px;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 100px 40px rgba(255,255,255,0.2);
+    border-radius: 15px;
+    
+    z-index: 1;
+}
+.card-body {
+    padding-left: 180px;
+}
+/* .btn-want {
+    width:200px;
+    height: 80px;
+}
+.btn-have {
+    width:200px;
+    height: 80px;
+} */
+
+
+
+
 footer {
     
 }
 @media screen and (min-width: 400px){
-    .SearchBox:hover .SearchBox-input {
+    /* .SearchBox:hover .SearchBox-input {
         width: 500px;
-    }
+    } */
 }
 
 /* svg */
