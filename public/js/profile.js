@@ -38,8 +38,8 @@ const renderAllBooks = (volumeData) => {
               <h5 class="card-title">${volumeData.items[i].volumeInfo.title}</h5>
               <p class="card-text">${volumeData.items[i].volumeInfo.description}</p>
               <p class="card-text"><small class="text-muted">${volumeData.items[i].volumeInfo.authors}</small></p>
-              <button>test button</button>
-              <button>test button</button>
+              <button class="btn btn-haveRead" id="btn-haveread">Have Read</button>
+              <button class="btn btn-wantRead" id="btn-wantread">Want Read</button>
             </div>
           </div>
           </div>
@@ -51,14 +51,15 @@ const renderAllBooks = (volumeData) => {
 }
 
 const addHaveRead = async (event) => {
-  event.preventDefault();
+ // event.preventDefault();
 
  // const getHaveRead = await document.querySelector(".haveRead");
 
   const response = await fetch("/api/books/past", {
     method: "POST",
     body: JSON.stringify({ 
-      title: "Book title",
+      title: "book title",
+      description: "This is the descrption",
       image_link: "",
       author: "author",
       read: true,
@@ -74,7 +75,7 @@ const addHaveRead = async (event) => {
 
 /********Add books to my I want to read list***********/
 const addWantRead = async (event) => {
-  event.preventDefault();
+ // event.preventDefault();
  
   //const haveReadBooks = document.querySelector(".haveRead");
 
@@ -95,5 +96,15 @@ const addWantRead = async (event) => {
 }
 
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
-document.querySelector("#btn-haveread").addEventListener("click", addHaveRead);
-document.querySelector("#btn-wantread").addEventListener("click", addWantRead);
+
+document.querySelector('body').addEventListener('click', event => {
+  if(event.target.matches('#btn-haveread')) {
+    addHaveRead();
+  }
+})
+document.querySelector('body').addEventListener('click', event => {
+  if(event.target.matches('#btn-wantread')) {
+    addWantRead();
+  }
+})
+
