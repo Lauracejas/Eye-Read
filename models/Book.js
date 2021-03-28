@@ -23,6 +23,11 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    read: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: true
+    },
     author: {
       type: DataTypes.STRING,
       allowNull: false,
