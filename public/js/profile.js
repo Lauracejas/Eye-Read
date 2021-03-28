@@ -79,17 +79,34 @@ const addHaveRead = () => {
       haveReadBooks.insertAdjacentHTML("beforeend", haveReadCard);
 }
 //}
+/********Add books to my I want to read list***********/
+const addWantRead = () => {
+  //event.preventDefault();
+  console.log(volumeData.items);
+  const haveReadBooks = document.querySelector(".haveRead");
+//for (let i = 0; i < volumeData.length; i++) {
 
+  let haveWantCard =
+          `
+     <div class="card mb-3" col-md-3>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${volumeData.items[0].volumeInfo.imageLinks.thumbnail}" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">${volumeData.items[0].volumeInfo.title}</h5>
+              <p class="card-text"><small class="text-muted">${volumeData.items[0].volumeInfo.authors}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+      haveReadBooks.insertAdjacentHTML("beforeend", haveWantCard);
+}
+//}
 
-
-//};
-
-// Add a book I want read to a mysql database
-// const addWantRead = async (event) => {
-//   event.preventDefault();
-
-// };
 
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
 document.querySelector("#btn-haveread").addEventListener("click", addHaveRead);
-// document.querySelector("#btn-wantread").addEventListener("click", addWantRead);
+document.querySelector("#btn-wantread").addEventListener("click", addWantRead);
