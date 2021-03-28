@@ -27,9 +27,9 @@ const renderAllBooks = (volumeData) => {
 
   let bookCard =
           `
-     <div class="card mb-3">
+     <div class="card mb-5">
         <div class="row g-0">
-          <div class="col-md-4">
+          <div class="col-md-2 picApi">
             <img src="${volumeData.items[0].volumeInfo.imageLinks.thumbnail}" alt="...">
           </div>
           <div class="col-md-7">
