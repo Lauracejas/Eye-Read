@@ -1,0 +1,15 @@
+<div class="comments">
+    {{#each this}}
+    <section class="comment">
+        <div class="meta">
+            {{user.username}} on {{format_date date_created}}</p>
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}}
+</div>
+<button class="btn" type="submit">Submit Comment</button>
+
+<script src="/js/profile.js"></script>

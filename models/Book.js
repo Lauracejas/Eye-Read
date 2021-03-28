@@ -27,10 +27,10 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    publish_date: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // publish_date: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
     reader_id: {
       type: DataTypes.INTEGER,
       references: {
