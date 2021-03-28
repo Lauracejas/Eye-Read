@@ -22,10 +22,9 @@ const searchBooks = async (event) => {
 };
 
 const renderAllBooks = (volumeData) => {
-  //event.preventDefault();
-  console.log(volumeData);
+    console.log(volumeData);
   const getBooks = document.querySelector(".getBook");
-  //for (let i = 0; i < volumeData.length; i++) {
+  for (let i = 0; i < volumeData.items.length; i++) {
 
   let bookCard =
           `
@@ -47,9 +46,9 @@ const renderAllBooks = (volumeData) => {
   </div>
   `;
   getBooks.insertAdjacentHTML("beforeend", bookCard);
-  //addHaveRead(volumeData);
+  addHaveRead();
 }
-//}
+}
 
 const addHaveRead = async (event) => {
   event.preventDefault();
@@ -60,40 +59,39 @@ const addHaveRead = async (event) => {
     method: "POST",
     body: JSON.stringify({ 
       title: "Book title",
-      description: "description",
       image_link: "",
       author: "author",
+      read: true,
+     }),
+    headers: { "Content-Type": "application/json" },
+
+  }); 
+  const data = await response.json();
+  console.log(data);
+}
+
+
+
+/********Add books to my I want to read list***********/
+const addWantRead = async (event) => {
+  event.preventDefault();
+ 
+  //const haveReadBooks = document.querySelector(".haveRead");
+
+  const response = await fetch("/api/books/past", {
+    method: "POST",
+    body: JSON.stringify({ 
+      title: "Book title",
+      //description: "description",
+      image_link: "",
+      author: "author",
+      read: false,
      }),
     headers: { "Content-Type": "application/json" },
 
   });
   console.log(response);
-}
 
-/********Add books to my I want to read list***********/
-const addWantRead = () => {
-  //event.preventDefault();
-  console.log(volumeData.items);
-  const haveReadBooks = document.querySelector(".haveRead");
-//for (let i = 0; i < volumeData.length; i++) {
-
-  let haveWantCard =
-          `
-     <div class="card mb-3" col-md-3>
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="${volumeData.items[0].volumeInfo.imageLinks.thumbnail}" alt="...">
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">${volumeData.items[0].volumeInfo.title}</h5>
-              <p class="card-text"><small class="text-muted">${volumeData.items[0].volumeInfo.authors}</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      `;
-      haveReadBooks.insertAdjacentHTML("beforeend", haveWantCard);
 }
 
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
