@@ -33,7 +33,7 @@ const renderAllBooks = (volumeData) => {
           <div class="col-md-2 picApi">
             <img src="${volumeData.items[i].volumeInfo.imageLinks.thumbnail}" alt="...">
           </div>
-          <div class="col-md-7">
+          <div class="col-md-10">
             <div class="card-body">
               <h5 class="card-title">${volumeData.items[i].volumeInfo.title}</h5>
               <p class="card-text">${volumeData.items[i].volumeInfo.description}</p>
