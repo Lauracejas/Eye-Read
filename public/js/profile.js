@@ -72,55 +72,6 @@ const addHaveRead = async (id, read) => {
 };
 
 
-// const addHaveRead = async (id) => {
-//   console.log(id);
-//  // event.preventDefault();
-//   const getHaveRead = await document.querySelector("#btn-haveread");
-//   console.log(id);
-//   const response = await fetch("/api/books/past", {
-//     method: "POST",
-//     body: JSON.stringify({ getHaveRead
-//       // title: "book title",
-//       // description: "This is the descrption",
-//       // image_link: "",
-//       // author: "author",
-//       // read: true,
-//      }),
-//     headers: { "Content-Type": "application/json" },
-
-//   });
-//   const data = await response.json(); 
-//   console.log(data);
-// }
-
-
-
-//}
-
-
-
-/********Add books to my I want to read list***********/
-// const addWantRead = async (id) => {
-//   console.log(id);
-//   // event.preventDefault();
-
-//   const haveReadBooks = document.querySelector(".wantRead");
-
-//   const response = await fetch("/api/books/past", {
-//     method: "POST",
-//     body: JSON.stringify({
-//       title: "Book title",
-//       //description: "description",
-//       image_link: "",
-//       author: "author",
-//       read: false,
-//     }),
-//     headers: { "Content-Type": "application/json" },
-
-//   });
-
-// }
-
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
 
 document.querySelector('body').addEventListener('click', event => {
@@ -132,9 +83,5 @@ document.querySelector('body').addEventListener('click', event => {
     addHaveRead(event.target.getAttribute('data-wantbookId'), false);
   }
 })
-// document.querySelector('body').addEventListener('click', event => {
-//   if (event.target.matches('.btn-wantRead')) {
-//     addWantRead(event.target.dataset.id);
-//   }
-// })
+
 
