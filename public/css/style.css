@@ -14,11 +14,13 @@ h4 {
     transform: translateZ(-40px);
     z-index: 1;
 }
-
+.nav {
+    margin-bottom: 30px;
+}
 .loginEl {
     
     padding-top: 20px;
-    margin: 60px 40px;
+    margin: 80px 40px;
     border-radius: 15px;
     box-shadow: 2px 2px 4px #000000;
     width: 900px;
@@ -30,7 +32,7 @@ h4 {
 }
 
 .signupEl {
-    margin: 80px;
+    margin: 40px;
     padding-top: 20px;
     border-radius: 15px;
     box-shadow: 2px 2px 4px #000000;
