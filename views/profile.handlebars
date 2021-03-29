@@ -1,3 +1,21 @@
 <div>partial of read books</div>
+{{log user}}
+
+{{#each user.books}}
+  {{#if read}}
+  <div class="card">
+    <p>title:{{title}}</p>
+
+  </div>
+  {{/if}}
+{{/each}}
+<div>partial of unread books</div>  
 <br>
-<div>partial of unread books</div>
+{{#each user.books}}
+  {{#unless read}}
+  <div class="card">
+    <p>title:{{title}}</p>
+
+  </div>
+  {{/unless}}
+{{/each}}
