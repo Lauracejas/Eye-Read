@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Book } = require("../../models");
+const { Book, User } = require("../../models");
 require("dotenv").config();
 const axios = require("axios");
 
@@ -54,7 +54,7 @@ router.get("/", async (req, res) => {
       where: { read: true },
       include: [
         {
-          model: Book,
+          model: User,
           attributes: ["name"],
         },
       ],
@@ -78,7 +78,7 @@ router.get("/", async (req, res) => {
       where: { read: false },
       include: [
         {
-          model: Book,
+          model: User,
           attributes: ["name"],
         },
       ],

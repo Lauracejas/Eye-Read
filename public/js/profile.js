@@ -17,7 +17,7 @@ const searchBooks = async (event) => {
   console.log(data.items[0].volumeInfo.description);
   console.log(data.items[0].volumeInfo.imageLinks.thumbnail);
 
-  document.querySelector(".getBook").innerHTML = "";
+  // document.querySelector(".getBook").innerHTML = " ";
   renderAllBooks(data);
 };
 
