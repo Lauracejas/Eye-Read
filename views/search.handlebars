@@ -3,7 +3,7 @@
 </div>
 <div class="row">
     <div class="col-auto">
-        <h3>{{name}}</h2>
+        <h3>{{user.name}}</h2>
     </div>
 </div>
 <div class="jumbotron text-center">
@@ -17,8 +17,9 @@
 
         <div class="row">
             <div class="getBook">
-                {{!-- <h2 class="getBook">Books I have read</h2> --}}
+                {{> book-card}}
             </div>
         </div>
-
-        <script src="/js/profile.js"></script>
+    </div>
+</div>
+<script src="/js/profile.js"></script>
