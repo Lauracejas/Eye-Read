@@ -50,7 +50,7 @@ const renderAllBooks = (volumeData) => {
   };
 }
 
-const addHaveRead = async (id) => {
+const addHaveRead = async (id, read) => {
   console.log(id);
 
   // const haveReadBook = document.querySelector(".haveReadList");
@@ -59,7 +59,7 @@ const addHaveRead = async (id) => {
   //if (haveReadBook && clickHaveRead) {
     const response = await fetch(`/api/books/past`, {
       method: 'POST',
-      body: JSON.stringify({ id }),
+      body: JSON.stringify({ id, read}),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -126,10 +126,10 @@ document.querySelector("#booksearch").addEventListener("click", searchBooks);
 document.querySelector('body').addEventListener('click', event => {
   if (event.target.matches('.btn-haveRead')) {
     console.log('click');
-    addHaveRead(event.target.getAttribute('data-bookId'));
+    addHaveRead(event.target.getAttribute('data-bookId'), true);
   }
   else if (event.target.matches('.btn-wantRead')) {
-    addWantRead(event.target.getAttribute('data-wantbookId'));
+    addHaveRead(event.target.getAttribute('data-wantbookId'), false);
   }
 })
 // document.querySelector('body').addEventListener('click', event => {
