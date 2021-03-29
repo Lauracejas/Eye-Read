@@ -33,13 +33,14 @@ router.post("/future", async (req, res) => {
 // Route that will store book to: ALREADY READ list
 router.post("/past", async (req, res) => {
   try {
-    const pastBook = await Book.create({
-      title: req.body.title,
-      description: req.body.description,
-      image_link: req.body.image_link,
-      author: req.body.author,
-      reader_id: req.body.reader_id,
-    });
+    // const pastBook = await Book.create({
+    //   title: req.body.title,
+    //   description: req.body.description,
+    //   image_link: req.body.image_link,
+    //   author: req.body.author,
+    //   reader_id: req.body.reader_id,
+    // });
+    console.log(req.body);
     res.status(200).json(pastBook);
   } catch (err) {
     res.status(400).json(err);
