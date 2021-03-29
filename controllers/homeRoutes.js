@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Book, User } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     // Get all Books and JOIN with user data
     const userData = await User.findAll({
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     const users = userData.map((user) => user.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render("homepage", {
+    res.render("search", {
       users,
       logged_in: req.session.logged_in,
     });

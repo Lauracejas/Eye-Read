@@ -17,17 +17,15 @@ const searchBooks = async (event) => {
   console.log(data.items[0].volumeInfo.description);
   console.log(data.items[0].volumeInfo.imageLinks.thumbnail);
 
-  document.querySelector(".getBook").innerHTML = "";
+  // document.querySelector(".getBook").innerHTML = " ";
   renderAllBooks(data);
 };
 
 const renderAllBooks = (volumeData) => {
-    console.log(volumeData);
+  console.log(volumeData);
   const getBooks = document.querySelector(".getBook");
   for (let i = 0; i < volumeData.items.length; i++) {
-
-  let bookCard =
-          `
+    let bookCard = `
      <div class="card mb-5">
         <div class="row g-0">
           <div class="col-md-2 picApi">
@@ -45,66 +43,60 @@ const renderAllBooks = (volumeData) => {
           </div>
       </div>
   `;
-  getBooks.insertAdjacentHTML("beforeend", bookCard);
-  addHaveRead();
-}
-}
+    getBooks.insertAdjacentHTML("beforeend", bookCard);
+    addHaveRead();
+  }
+};
 
 const addHaveRead = async (event) => {
- // event.preventDefault();
+  // event.preventDefault();
 
- // const getHaveRead = await document.querySelector(".haveRead");
+  // const getHaveRead = await document.querySelector(".haveRead");
 
   const response = await fetch("/api/books/past", {
     method: "POST",
-    body: JSON.stringify({ 
+    body: JSON.stringify({
       title: "book title",
       description: "This is the descrption",
       image_link: "",
       author: "author",
       read: true,
-     }),
+    }),
     headers: { "Content-Type": "application/json" },
-
-  }); 
+  });
   const data = await response.json();
   console.log(data);
-}
-
-
+};
 
 /********Add books to my I want to read list***********/
 const addWantRead = async (event) => {
- // event.preventDefault();
- 
+  // event.preventDefault();
+
   //const haveReadBooks = document.querySelector(".haveRead");
 
   const response = await fetch("/api/books/past", {
     method: "POST",
-    body: JSON.stringify({ 
+    body: JSON.stringify({
       title: "Book title",
       //description: "description",
       image_link: "",
       author: "author",
       read: false,
-     }),
+    }),
     headers: { "Content-Type": "application/json" },
-
   });
   console.log(response);
-
-}
+};
 
 document.querySelector("#booksearch").addEventListener("click", searchBooks);
 
-document.querySelector('body').addEventListener('click', event => {
-  if(event.target.matches('#btn-haveread')) {
+document.querySelector("body").addEventListener("click", (event) => {
+  if (event.target.matches("#btn-haveread")) {
     addHaveRead();
   }
-})
-document.querySelector('body').addEventListener('click', event => {
-  if(event.target.matches('#btn-wantread')) {
+});
+document.querySelector("body").addEventListener("click", (event) => {
+  if (event.target.matches("#btn-wantread")) {
     addWantRead();
   }
-})
-
+});
