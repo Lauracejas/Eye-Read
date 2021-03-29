@@ -14,6 +14,8 @@ router.post("/", async (req, res) => {
   res.json(data);
 });
 
+
+
 // Route that will store book to: WANT TO READ list
 router.post("/future", async (req, res) => {
   try {
@@ -41,6 +43,7 @@ router.post("/past", async (req, res) => {
 
     const pastBook = await Book.create({
       title: volumeInfo.title,
+      description: volumeInfo.description,
       image_link: volumeInfo.imageLinks.thumbnail,
       author: volumeInfo.authors[0],
       book_link: volumeInfo.previewLink,
