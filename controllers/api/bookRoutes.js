@@ -38,10 +38,12 @@ router.post("/past", async (req, res) => {
         req.body.id 
     );
     const {volumeInfo} = data;
+
     const pastBook = await Book.create({
       title: volumeInfo.title,
       image_link: volumeInfo.imageLinks.thumbnail,
       author: volumeInfo.authors[0],
+      book_link: volumeInfo.previewLink,
       reader_id: req.session.user_id,
       read: req.body.read,
     });

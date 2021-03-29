@@ -32,10 +32,10 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // publish_date: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
+    book_link: {
+      type: DataTypes.TEXT('medium'),
+      allowNull: true,
+    },
     reader_id: {
       type: DataTypes.INTEGER,
       references: {
