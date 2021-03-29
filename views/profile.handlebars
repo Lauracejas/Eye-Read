@@ -1,21 +1,42 @@
-<div>partial of read books</div>
+<h2>Books I have Already Read</h2>
 {{log user}}
 
 {{#each user.books}}
   {{#if read}}
-  <div class="card">
-    <p>title:{{title}}</p>
-
-  </div>
+<div class="card mb-5">
+        <div class="row g-0">
+          <div class="col-md-2 picApi">
+            <img src="{{image_link}}" alt="...">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">{{title}}</h5>
+              <p class="card-text"><small class="text-muted">{{author}}</small></p>
+            
+            </div>
+          </div>
+          </div>
+      </div>
   {{/if}}
 {{/each}}
-<div>partial of unread books</div>  
+
+<h2>Books I Want to Read</h2>  
 <br>
 {{#each user.books}}
   {{#unless read}}
-  <div class="card">
-    <p>title:{{title}}</p>
-
-  </div>
+  <div class="card mb-5">
+        <div class="row g-0">
+          <div class="col-md-2 picApi">
+            <img src="{{image_link}}" alt="...">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">{{title}}</h5>
+              <p class="card-text"><small class="text-muted">{{author}}</small></p>
+            
+            </div>
+          </div>
+          </div>
+      </div>
   {{/unless}}
 {{/each}}
