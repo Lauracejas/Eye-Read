@@ -1,5 +1,5 @@
 
-h3 {
+h4 {
     margin-top: 30px;
 }
 .navbl {
@@ -28,9 +28,7 @@ h3 {
 .loginEl:hover {
     transform: scale(1.1);
 }
-.col {
-padding-left: 10px;
-}
+
 .signupEl {
     margin: 80px;
     padding-top: 20px;
@@ -59,8 +57,7 @@ nav {
 body {
     padding: 0;
 	margin: 0;
-	/* font-family: 'helvetica', sans-serif; */
-    /* background-image:url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80") ; */
+    background-image:url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80") ;
     background: #2c3e50;
     backdrop-filter: blur(8px);
 }
@@ -72,23 +69,36 @@ img:hover {
 }
 
 /* // Main container styles */
-.container {
-    position: relative;
-	width: 100%;
+.container-fluid {
+    padding: 0px;
+	/* width: 100%; */
 	height: 100%;
-    margin-top: 0px;
+    
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items:center;
-	padding: 20px;
 	box-sizing: border-box;
     perspective: 400px;
     
     
 }
-
+.haveAR {
+    margin-top: 120px;
+}
+.container-profile {
+    display: inline-block;
+    /* margin: 20px; */
+    width: 100%;
+    padding: 20px;
+    /* background-color: teal; */
+}
+.breakout {
+    width: 100vw;
+    position: relative;
+    left: calc(-1 * (100vw -100%) / 2)
+}
 
 .backlight {
     position: relative;
@@ -106,50 +116,22 @@ img:hover {
 
 
 .btn {
-    /* position: relative;
-    margin: 0px;
-    color: white;
-    border-radius:20%;
-    opacity: 0.9;
-    border: 2px solid rgba(255,255,255,0.4);
-    background-color: #34495e;
-    
-    line-height: 50px; */
+   
     color: white;
 }
 .btn:hover {
     opacity: 1;
     color: rgb(101, 150, 3);
-    
-    /* background-color: teal; */
 }
-/* .btn::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -21px;
-    margin-top: -21px;
-    width: 42px;
-    height: 42px;
-    border-radius:50%;
-    background-color: rgba(0,0,0,0.3);
-    box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
-    transform: translateZ(50px);
-    z-index: 4;
-} */
+
 
 
 /* profile page  */
 .jumbotron {
     background:transparent;
-    /* backdrop-filter: blur(8px); */
-    
+
 }
 
-.SearchBox {
-    /* padding-bottom: 60px */
-}
 .picApi {
     padding: 20px;
     width: 300px;
@@ -171,28 +153,16 @@ img:hover {
     
     z-index: 1;
 }
-.card-body {
-    /* padding-left: 180px; */
-}
-/* .btn-want {
-    width:200px;
-    height: 80px;
-}
-.btn-have {
-    width:200px;
-    height: 80px;
-} */
 
-
-
-
-footer {
-    
-}
-@media screen and (min-width: 400px){
+/* @media screen and (min-width: 375px){ */
     /* .SearchBox:hover .SearchBox-input {
         width: 500px;
     } */
-}
+    /* .container-profile {
+        display: inline-block;
+        margin: 10px;
+        width: 69%;
+    } */
+/* } */
 
-/* svg */
+
