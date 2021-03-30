@@ -31,9 +31,13 @@ The project has been designed to fetch and render relevant book information from
 
 ## Screenshots
 ---
+Home Page
+
+![Home Screenshot](./public/images/Search.JPG)
+
 Profile Page
 
-![Home Screenshot](./)
+![Home Screenshot](./public/images/profile.JPG)
 
 ## Sources
 ---

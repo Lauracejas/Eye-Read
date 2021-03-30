@@ -68,7 +68,9 @@ router.get("/search/:search", withAuth, async (req, res) => {
       const booksArray = data.items.map(book => {
       let thumb
       if (book.volumeInfo.imageLinks === undefined) {
-        console.log("here here")
+
+        //console.log("here here")
+
         thumb = "http://dummy-images.com/abstract/dummy-50x50-Goemetry.jpg";
       }else{
         thumb = book.volumeInfo.imageLinks.thumbnail
