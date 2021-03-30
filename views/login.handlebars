@@ -1,7 +1,6 @@
-{{!-- <div class="col-md-3 loginEl"> --}}
+<form>
 
-
-  <form class="form login-form backlight loginEl">
+  <div class="form-group login-form backlight loginEl">
     <h3 class="row justify-content-center text-white">Login</h3>
     <div class="mb-3">
       <div class="col">
@@ -18,43 +17,47 @@
         <button class="btn" type="submit">Login</button>
       </div>
     </div>
-  </form>
+  </div>
+</form>
 
-  <form class="form signup-form backlight signupEl">
-    <h3 class="row justify-content-center text-white">Signup</h3>
+
+
+
+<form class="form signup-form backlight signupEl">
+  <h3 class="row justify-content-center text-white">Signup</h3>
+  <div class="mb-3">
+
+    <div class="col">
+
+      <input class="form-input form-control" type="text" id="name-signup" placeholder="Name" />
+    </div>
+  </div>
+  <div class="mb-3">
+
+    <div class="col">
+      <input class="form-input form-control" type="text" id="email-signup" placeholder="Email" />
+
+    </div>
+  </div>
+  <div class="mb-3">
+
+    <div class="col">
+
+      <input class="form-input form-control" type="password" id="password-signup" placeholder="Password" />
+    </div>
+  </div>
+  <div class="form-group text-center">
     <div class="mb-3">
-
       <div class="col">
 
-        <input class="form-input form-control" type="text" id="name-signup" placeholder="Name" />
+        <button class="btn" type="submit">Signup</button>
       </div>
     </div>
-    <div class="mb-3">
+  </div>
+</form>
 
-      <div class="col">
-        <input class="form-input form-control" type="text" id="email-signup" placeholder="Email" />
 
-      </div>
-    </div>
-    <div class="mb-3">
 
-      <div class="col">
 
-        <input class="form-input form-control" type="password" id="password-signup" placeholder="Password" />
-      </div>
-    </div>
-    <div class="form-group text-center">
-      <div class="mb-3">
-        <div class="col">
-
-          <button class="btn" type="submit">Signup</button>
-        </div>
-      </div>
-    </div>
-  </form>
-
-</div>
-</div>
-</div> 
 
 <script src="/js/login.js"></script>
