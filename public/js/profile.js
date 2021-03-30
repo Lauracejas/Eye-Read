@@ -91,10 +91,11 @@ document.querySelector("#booksearch").addEventListener("click", searchBooks);
 
 document.querySelector('body').addEventListener('click', event => {
   if (event.target.matches('.btn-haveRead')) {
-    console.log('click');
+    alert('This book has been added to your list!');
     addHaveRead(event.target.getAttribute('data-bookId'), true);
   }
   else if (event.target.matches('.btn-wantRead')) {
+    alert('This book has been added to your list!');
     addHaveRead(event.target.getAttribute('data-wantbookId'), false);
   }
 })
