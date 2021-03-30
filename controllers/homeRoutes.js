@@ -69,7 +69,7 @@ router.get("/search/:search", withAuth, async (req, res) => {
       let thumb
       if (book.volumeInfo.imageLinks === undefined) {
         console.log("here here")
-        thumb = "http://dummy-images.com/abstract/dummy-350x350-Goemetry.jpg";
+        thumb = "http://dummy-images.com/abstract/dummy-50x50-Goemetry.jpg";
       }else{
         thumb = book.volumeInfo.imageLinks.thumbnail
       }

@@ -1,3 +1,5 @@
+
+
 <div class="grid-bg ba-grid anim">
     <div class="inner"></div>
 </div>
@@ -6,20 +8,26 @@
         <h3>{{user.name}}</h2>
     </div>
 </div>
-<div class="jumbotron text-center">
 
-    <div class="SearchBox">
-        <input type="text" class="SearchBox-input search-input" placeholder="search something cool">
 
-        <button class="SearchBox-button" id="booksearch">
-            <i class="SearchBox-icon  material-icons">search</i>
+
+    <div class=" SearchBox input-group center-block">
+        <input type="text" class="SearchBox-input search-input form-control" placeholder="search something cool">
+
+        <button type="button" class="SearchBox-button btn btn-outline-light" id="booksearch">
+            <i class="SearchBox-icon  material-icons">Search</i>
         </button>
 
+    </div>
+    
+
+
+
+    </div>
         <div class="row">
             <div class="getBook">
                 {{> book-card}}
             </div>
         </div>
-    </div>
 </div>
 <script src="/js/profile.js"></script>
