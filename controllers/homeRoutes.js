@@ -57,18 +57,7 @@ router.get("/", withAuth, async (req, res) => {
 
 router.get("/search/:search", withAuth, async (req, res) => {
   console.log('route', req.params.search)
-  try {
-    // Get all Books and JOIN with user data
-   // const userData = await User.findAll({
-    //   include: [
-    //     {
-    //       model: Book,
-    //       attributes: ["title", "description", "book_link", "image_link", "author"],
-    //     },
-    //   ],
-    // });
-    // // Serialize data so the template can read it
-    // const users = userData.map((user) => user.get({ plain: true }));
+  try {    
     const { data } = await axios.get(
       "https://www.googleapis.com/books/v1/volumes?q=intitle:" +
       req.params.search +
@@ -76,15 +65,7 @@ router.get("/search/:search", withAuth, async (req, res) => {
       process.env.GOOGLEBOOKS_APIKEY
     );
     console.log('HELLO');
-    // const books = data.items.map(book => {
-    //   return {
-    //     title: book.volumeInfo.title,
-    //     thumbnail: book.volumeInfo.imageLinks.thumbnail,
-    //     id: book.id,
-    //     authors: book.volumeInfo.authors,
-    //   }
-    // })
-    const booksArray = data.items.map(book => {
+      const booksArray = data.items.map(book => {
       let thumb
       if (book.volumeInfo.imageLinks === undefined) {
         console.log("here here")
