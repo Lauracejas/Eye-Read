@@ -56,7 +56,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 router.get("/search/:search", withAuth, async (req, res) => {
-  console.log('route', req.params.search)
+ 
   try {    
     const { data } = await axios.get(
       "https://www.googleapis.com/books/v1/volumes?q=intitle:" +
@@ -64,13 +64,11 @@ router.get("/search/:search", withAuth, async (req, res) => {
       "&key=" +
       process.env.GOOGLEBOOKS_APIKEY
     );
-    console.log('HELLO');
+   
       const booksArray = data.items.map(book => {
       let thumb
       if (book.volumeInfo.imageLinks === undefined) {
-
-        //console.log("here here")
-
+        
         thumb = "http://dummy-images.com/abstract/dummy-50x50-Goemetry.jpg";
       }else{
         thumb = book.volumeInfo.imageLinks.thumbnail
@@ -90,7 +88,6 @@ router.get("/search/:search", withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });

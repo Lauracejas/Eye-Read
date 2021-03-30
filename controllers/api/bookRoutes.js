@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
       "&key=" +
       process.env.GOOGLEBOOKS_APIKEY
   );
-  console.log(data);
+ 
   res.json(data);
 });
 
@@ -50,10 +50,9 @@ router.post("/past", async (req, res) => {
       reader_id: req.session.user_id,
       read: req.body.read,
     });
-    //console.log(data);
+  
     res.status(200).json(pastBook);
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -88,10 +87,10 @@ router.get("/test", async (req, res) => {
       include: [Book]
       
     })
-   // console.log(bookData, 'here');  
+
     res.json(bookData)
   } catch (err) {
-    console.log(err);
+ 
     res.status(500).json(err);
   }
 });

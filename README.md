@@ -27,7 +27,8 @@ The project has been designed to fetch and render relevant book information from
 
 ## Process
 ---
-
+- We used google book Api to get data information for this application. We used axios package to make http request from node.js and get back the data from the Api. 
+- We used sequelize and node to setup the server for our app, Express.js as the middleware and Handlebars as the templates rendering engine for this app.
 
 ## Screenshots
 ---
@@ -64,14 +65,18 @@ See repository here: https://github.com/Lauracejas/Project-2-Eye-Read
 
 ## Credits
 ---
-
+- We want to thank Anthony and Max for all of their help!
+- Class activities
+- [google.com](https://www.google.com/)
+- [npmjs](https://www.npmjs.com/)
+- [Google Book API](http://books.google.com/books/content?id=gK98gXR8onwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api)
 
 ## Contributing
 ---
 
 Laura Cejas: [@Lauracejas](https://github.com/Lauracejas)
 
-John Kim: [@JhonKim](https://github.com/mother426)
+John Kim: [@JohnKim](https://github.com/mother426)
 
 Carlos Abril: [@cabril87](https://github.com/cabril87git)
 
