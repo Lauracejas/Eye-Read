@@ -85,6 +85,7 @@ body {
     backdrop-filter: blur(8px);
     height: 100vw;
     padding-bottom: 20px;
+    /* background: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGJhY2tncm91bmR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60") no-repeat center center/cover; */
 }
 img {
     transition: all .2s ease-in-out;
@@ -166,7 +167,8 @@ img:hover {
     transform: translateZ(-40px);
     z-index: 1;
     margin: 40px;
-    transition: all .2s ease-in-out;
+    /* transition: all .2s ease-in-out; */
+    transition: 0.2s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: inset 5px 5px 10px #000000, 
     inset -5px -5px 10px rgb(101, 101, 102);
     
@@ -181,9 +183,75 @@ img:hover {
 .card-text {
     color: white;
 }
+
+
+.app{
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+    height:100vh;
+    width:100%;
+    }
+    ul{
+      display:block;
+      width:100%;
+      height:inherit;
+    }
+    ul{
+        list-style-type:none;
+    }
+    li:nth-child(1)
+    {
+        position:absolute;
+        border-radius: 50%;
+      left:10%;
+      height:30px;
+      width:30px;
+      background:rgba(255,255,255,.2);
+    }
+    li:nth-child(2)
+    {
+      position:absolute;
+      border-radius: 50%;
+      left:30%;
+      height:45px;
+      width:45px;
+      background:rgba(255,255,255,.2);
+    }
+    li:nth-child(3)
+    {
+      position:absolute;
+      border-radius: 50%;
+      left:50%;
+      height:70px;
+      width:70px;
+      background:rgba(255,255,255,.2);
+    }
+    li:nth-child(4)
+    {
+      position:absolute;
+      border-radius: 50%;
+      left:80%;
+      height:20px;
+      width:20px;
+      background:rgba(255,255,255,.2);
+    }
+    li{
+      animation:animate 15s linear 1s infinite;
+    }
+    
+    @keyframes animate{
+      from{
+        transform: translateY(+1500%) rotate(180deg)
+      }
+      to{
+        transform: translateY(-150%)
+          rotate(360deg)
+      }
+    }
 footer {
     height: 50px;
 }
+
 
 
 
