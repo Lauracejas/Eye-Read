@@ -22,22 +22,22 @@
 </div>
 {{/if}}
 {{/each}} --}}
-<div class="wrapper">
 <div class="breakout"></div>
+{{!-- <div class="wrapper"> --}}
 <div class="row haveAR align-items-center">
   <div class="col-md-12 align-self-center">
 
     <h4>Books I Have Already Read</h4>
   </div>
 </div>
-<div class="container-profile">
-  <div class="row justify-content-center">
+<div class="container-profile d-flex" >
+  <div class="row ">
     {{#each user.books}}
     {{#if read}}
     {{log user}}
     <div class="col ">
 
-      <div class="card" style="max-width: 18rem; height: 400px;">
+      <div class="card" style="max-width: 18rem; height: 450px;">
         <img class="rounded mx-auto d-block" width="120px" height="150px" src="{{image_link}}" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center p-2">{{title}}</h5>
@@ -63,7 +63,7 @@
   </div>
 </div>
 {{!-- <div class="breakout"></div> --}}
-<div class=" container-profile">
+<div class=" container-profile d-flex">
   <div class="row justify-content-center">
     {{!-- {{#each user.books}}
     {{#if read}}
