@@ -22,7 +22,7 @@
 </div>
 {{/if}}
 {{/each}} --}}
-
+<div class="wrapper">
 <div class="breakout"></div>
 <div class="row haveAR align-items-center">
   <div class="col-md-12 align-self-center">
@@ -31,20 +31,20 @@
   </div>
 </div>
 <div class="container-profile">
-  <div class="row">
+  <div class="row justify-content-center">
     {{#each user.books}}
     {{#if read}}
     {{log user}}
-    <div class="col-3.5 ">
+    <div class="col ">
 
-      <div class="card" style="max-width: 18rem;">
+      <div class="card" style="max-width: 18rem; height: 400px;">
         <img class="rounded mx-auto d-block" width="120px" height="150px" src="{{image_link}}" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center p-2">{{title}}</h5>
           <p class="card-text text-center p-2"><small class="text-muted">{{author}}</small></p>
-          <div class="link-btn text-center p-2">
+          <button class="link-btn text-center p-2">
             <a href="{{book_link}}" class="btn btn-primary">Preview</a>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -62,24 +62,24 @@
     <h4>Books I Want to Read</h4>
   </div>
 </div>
-<div class="breakout"></div>
-<div class="container-profile">
-  <div class="row align-items-center">
+{{!-- <div class="breakout"></div> --}}
+<div class=" container-profile">
+  <div class="row justify-content-center">
     {{!-- {{#each user.books}}
     {{#if read}}
     {{log user}} --}}
     {{#each user.books}}
     {{#unless read}}
-    <div class="col-3.5 ">
+    <div class="col ">
 
-      <div class="card" style="max-width: 18rem;">
-        <img class="rounded mx-auto d-block" width="120px" height="150px" src="{{image_link}}" alt="...">
-        <div class="card-body">
+      <div class="card " style="max-width: 18rem; height: 450px">
+        <img class="rounded mx-auto d-flex" width="120px" height="150px" src="{{image_link}}" alt="...">
+        <div class="card-body ">
           <h5 class="card-title text-center p-2">{{title}}</h5>
           <p class="card-text text-center p-2"><small class="text-muted">{{author}}</small></p>
-          <div class="link-btn text-center p-2">
+          <button class="link-btn text-center p-2">
             <a href="{{book_link}}" class="btn btn-primary">Preview</a>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -88,6 +88,8 @@
     {{/unless}}
     {{/each}}
   </div>
+</div>
+
 </div>
 
 

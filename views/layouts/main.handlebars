@@ -16,18 +16,21 @@
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class="d-flex flex-column">
 
   <header>
-    <nav class="navbar display-flex justify-content-around p-0 navbl">
+    <nav class="navbar display-flex justify-content-around navbl">
 
       <a href="/">
-        <img src="/images/ER.png">
+        <img class="logo"src="/images/ER.png">
       </a>
 
       {{#if logged_in}}
-      <a href="/profile">profile</a> |
-      <button class="btn no-button " id="logout">logout</button>
+      <div class="d-grid gap-2 d-md-flex justify-content-end">
+
+      <a class="btn btn-lg" href="/profile">Profile</a> 
+      <button class="btn btn-lg no-button" id="logout">Logout</button>
+      </div>
       {{else}}
       <a class="btn" href="/login">Login</a>
       {{/if}}
@@ -35,14 +38,16 @@
     </nav>
 
   </header>
-  <main class="container container-fluid justify-content:center">
+  <main class="container container-fluid text-center">
+    
 
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>
-  <footer>
-    <nav></nav>
-  </footer>
+  <footer></footer>
+ 
+
+</footer>
   </div>
 
   <!-- Render script for logged in users only -->

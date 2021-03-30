@@ -1,4 +1,4 @@
-{{#each books}} 
+{{!-- {{#each books}}
 {{log books}}
 <div class="row">
     <div class="getBook">
@@ -22,4 +22,22 @@
         </div>
     </div>
 </div>
-{{/each}}
+{{/each}} --}}
+
+
+{{#each books}}
+{{log books}}
+<div class="card-group srCard">
+    <div class="card align-items-center">
+        <div class="card-body text-center ">
+            <h5 class="card-title">{{title}}</h5>
+            <img class="card-img-top" src="{{thumbnail}}" alt="Card image cap" style="width: 10rem; height: 14rem;">
+            <p class="card-text">{{description}}</p>
+            <p class="card-text"><small class="text-muted">{{authors}}</small></p>
+            <button class="btn btn-haveRead" data-bookId="{{id}}">Have
+                Read</button>
+            <button class="btn btn-wantRead" data-wantbookId="{{id}}">Want
+                Read</button>
+        </div>
+    </div>
+    {{/each}} 
